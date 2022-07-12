@@ -1,4 +1,4 @@
-.TH man 3 "12 July 2022" "0.1" "_printf man page"
+.TH man 3 "10 july 2022" "0.1" "_printf man page"
 .SH NAME
 .B _printf
 - Formatted output conversion.
@@ -62,30 +62,14 @@ Prints a string converted to rot13
 .B %
 A '%' is written but no argument is converted. The complete version specification is '%%'
 .SH EXAMPLE
-pointers to strings and day and year are integers:
-To print the address of Domino's Pizza, Bodija in the form "36, Awolowo Avenue, Ibadan, Oyo", 
-followed by a new line, where street, city and state are pointers to strings:
-
-.RS
+To print the day of the year, where weekday and month are pointers to strings and day and year are integers:
 
 #include "main.h"
 
-int main(void)
-
-{
-
-	char *street = "Awolowo Avenue";
-
-	char *city = "Ibadan";
-
-	char *state = "Oyo";
-
-	printf("%d %s, %s, %s\\n", 36, street, city, state,);
-
-
+_printf("%s, %s %d, %d\\n", weekday, month, day, year);
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
 No known bugs
 .SH AUTHOR
-Adewole Conde and John Ofem
+Oliver Samuel, Abimbola Sherifah
